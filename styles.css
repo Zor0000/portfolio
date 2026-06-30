@@ -285,31 +285,14 @@ img { max-width: 100%; display: block; }
   align-items: center;
 }
 .about__photo {
+  width: 100%;
+  height: auto;
   aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center;
   border-radius: var(--radius);
-}
-
-/* ============================================================
-   Placeholders (swap for real imagery)
-   ============================================================ */
-.placeholder {
-  position: relative;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
   border: 1px solid var(--line);
 }
-.placeholder__label {
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.92);
-  background: rgba(0, 0, 0, 0.28);
-  padding: 0.4em 0.9em;
-  border-radius: 980px;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-}
-.grad-portrait { background: linear-gradient(150deg, #e0c3fc, #8ec5fc); }
 
 /* ============================================================
    Experience
