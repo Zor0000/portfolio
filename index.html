@@ -172,33 +172,23 @@
       <div class="container">
         <p class="eyebrow reveal">Selected work</p>
         <h2 class="section__title reveal">Things I've built.</h2>
-      </div>
 
-      <div class="features">
+        <div class="project-grid">
 
-        <!-- Project 1 -->
-        <article class="feature container reveal">
-          <img class="feature__media" src="screens/datacenter.jpg" alt="Data Center Cooling Optimization — project landing page showing the RL cooling simulation" loading="lazy" width="1600" height="1058" />
-          <div class="feature__text">
-            <h3 class="feature__title">Data Center Cooling Optimization</h3>
-            <p class="feature__pitch">A reinforcement-learning agent that learns continuous cooling control for a multi-zone data centre — keeping every zone in bounds while cutting power.</p>
-            <p class="body">A custom Gymnasium environment models the thermal dynamics and power draw; a Soft Actor-Critic agent learns the policy, with live temperature, power, and reward plots so runs reproduce across seeds.</p>
+          <article class="project-card reveal">
+            <h3 class="project-card__title">Data Center Cooling Optimization</h3>
+            <p class="project-card__pitch">A reinforcement-learning agent that learns continuous cooling control for a multi-zone data centre — holding every zone in bounds while cutting power. A custom Gymnasium environment models the thermal dynamics; a Soft Actor-Critic agent learns the policy.</p>
             <ul class="tags">
               <li>Python</li><li>Gymnasium</li><li>Stable-Baselines3</li><li>SAC</li>
             </ul>
             <p class="feature__links">
               <a href="https://github.com/Zor0000/datacenter-rl-cooling" target="_blank" rel="noopener">GitHub&nbsp;↗</a>
             </p>
-          </div>
-        </article>
+          </article>
 
-        <!-- Project 2 (flipped) -->
-        <article class="feature feature--flip container reveal">
-          <img class="feature__media" src="screens/gymbuddy.jpg" alt="GymBuddy Agent — chat interface powered by a Neo4j Aura agent" loading="lazy" width="1600" height="1200" />
-          <div class="feature__text">
-            <h3 class="feature__title">GymBuddy Agent</h3>
-            <p class="feature__pitch">A graph-backed fitness agent that reasons over exercises and routines to coach you through a session. Deployed and live.</p>
-            <p class="body">It walks an exercise knowledge graph in Cypher to plan and adapt workouts in conversation, then runs in production on Vercel.</p>
+          <article class="project-card reveal">
+            <h3 class="project-card__title">GymBuddy Agent</h3>
+            <p class="project-card__pitch">A graph-backed fitness agent that reasons over exercises and routines to coach you through a session. It walks an exercise knowledge graph in Cypher to plan and adapt workouts in conversation — deployed and live on Vercel.</p>
             <ul class="tags">
               <li>Neo4j</li><li>Cypher</li><li>AI Agent</li><li>Vercel</li>
             </ul>
@@ -206,46 +196,36 @@
               <a href="https://gymbuddy-gamma-one.vercel.app" target="_blank" rel="noopener">Live&nbsp;↗</a>
               <a href="https://github.com/Zor0000/gymbuddy-agent" target="_blank" rel="noopener">GitHub&nbsp;↗</a>
             </p>
-          </div>
-        </article>
+          </article>
 
-        <!-- Project 3 -->
-        <article class="feature container reveal">
-          <img class="feature__media" src="screens/ironlog.jpg" alt="IronLog — gym tracker sign-in screen" loading="lazy" width="1600" height="1200" />
-          <div class="feature__text">
-            <h3 class="feature__title">IronLog</h3>
-            <p class="feature__pitch">An offline-first PWA for logging workouts and tracking splits — installable, mobile-first, and works with no signal in the gym.</p>
-            <p class="body">Persistent local storage with sync, plus an intuitive UI for managing exercises, sets, reps, and rest periods across the week.</p>
+          <article class="project-card reveal">
+            <h3 class="project-card__title">IronLog</h3>
+            <p class="project-card__pitch">An offline-first PWA for logging workouts and tracking splits — installable, mobile-first, and works with no signal in the gym. Persistent local storage with sync, plus a clean UI for managing exercises, sets, reps, and rest.</p>
             <ul class="tags">
               <li>React</li><li>FastAPI</li><li>Python</li><li>PWA</li>
             </ul>
             <p class="feature__links">
               <a href="https://github.com/Zor0000/ironlog" target="_blank" rel="noopener">GitHub&nbsp;↗</a>
             </p>
-          </div>
-        </article>
+          </article>
 
-        <!-- Project 4 (flipped) -->
-        <article class="feature feature--flip container reveal">
-          <img class="feature__media" src="screens/rewatch.jpg" alt="ReWatch — editorial watch recommendation web app" loading="lazy" width="1600" height="1200" />
-          <div class="feature__text">
-            <h3 class="feature__title">ReWatch</h3>
-            <p class="feature__pitch">A content-based recommender for wristwatches that matches taste from both structured fields and free text.</p>
-            <p class="body">Feature engineering with one-hot encoding, scaling, and TF-IDF over brand, style, movement, and description; cosine similarity surfaces the closest matches.</p>
+          <article class="project-card reveal">
+            <h3 class="project-card__title">ReWatch</h3>
+            <p class="project-card__pitch">A content-based recommender for wristwatches that matches taste from both structured fields and free text. Feature engineering with one-hot encoding, scaling, and TF-IDF; cosine similarity surfaces the closest matches.</p>
             <ul class="tags">
               <li>scikit-learn</li><li>pandas</li><li>NumPy</li>
             </ul>
             <p class="feature__links">
               <a href="https://github.com/Zor0000/ReWatch" target="_blank" rel="noopener">GitHub&nbsp;↗</a>
             </p>
-          </div>
-        </article>
+          </article>
 
+        </div>
+
+        <p class="center-more reveal">
+          More on <a href="https://github.com/Zor0000?tab=repositories" target="_blank" rel="noopener">GitHub&nbsp;↗</a>
+        </p>
       </div>
-
-      <p class="container center-more reveal">
-        More on <a href="https://github.com/Zor0000?tab=repositories" target="_blank" rel="noopener">GitHub&nbsp;↗</a>
-      </p>
     </section>
 
     <!-- ============================ SKILLS ============================ -->

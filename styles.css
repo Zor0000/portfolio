@@ -310,10 +310,6 @@ img { max-width: 100%; display: block; }
   -webkit-backdrop-filter: blur(4px);
 }
 .grad-portrait { background: linear-gradient(150deg, #e0c3fc, #8ec5fc); }
-.grad-1 { background: linear-gradient(135deg, #4facfe, #00f2fe); }
-.grad-2 { background: linear-gradient(135deg, #43e97b, #38f9d7); }
-.grad-3 { background: linear-gradient(135deg, #fa709a, #fee140); }
-.grad-4 { background: linear-gradient(135deg, #667eea, #764ba2); }
 
 /* ============================================================
    Experience
@@ -359,39 +355,39 @@ img { max-width: 100%; display: block; }
 }
 
 /* ============================================================
-   Projects — alternating feature rows
+   Projects — card grid
    ============================================================ */
-.features { display: flex; flex-direction: column; gap: clamp(3.5rem, 8vw, 7rem); margin-top: clamp(2.5rem, 5vw, 4rem); }
-.feature {
+.project-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: clamp(2rem, 5vw, 4.5rem);
-  align-items: center;
+  gap: clamp(1.2rem, 2.5vw, 1.8rem);
+  margin-top: clamp(2.2rem, 4vw, 3.2rem);
 }
-.feature--flip .feature__media { order: 2; }
-.feature__media {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  object-position: center top;
-  border-radius: var(--radius);
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--card);
   border: 1px solid var(--line);
-  box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.28);
+  border-radius: var(--radius);
+  padding: clamp(1.6rem, 3vw, 2.4rem);
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease), border-color 0.3s var(--ease);
 }
-.feature__title {
-  font-size: clamp(1.6rem, 1.2rem + 1.4vw, 2.3rem);
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 48px -28px rgba(0, 0, 0, 0.30);
+  border-color: color-mix(in srgb, var(--text) 14%, transparent);
+}
+.project-card__title {
+  font-size: clamp(1.35rem, 1.15rem + 0.7vw, 1.6rem);
   font-weight: 700;
-  letter-spacing: -0.03em;
-  line-height: 1.08;
-  margin-bottom: 0.9rem;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  margin-bottom: 0.8rem;
 }
-.feature__pitch {
-  font-size: clamp(1.05rem, 1rem + 0.4vw, 1.25rem);
-  color: var(--text-soft);
-  line-height: 1.4;
-  max-width: 42ch;
-}
-.feature__links { display: flex; gap: 1.4rem; margin-top: 1.4rem; font-weight: 400; }
+.project-card__pitch { color: var(--text-soft); line-height: 1.5; }
+.project-card .tags { margin-top: 1.4rem; }
+.project-card .feature__links { margin-top: auto; padding-top: 1.5rem; }
+.feature__links { display: flex; gap: 1.4rem; font-weight: 400; }
 
 /* Tag pills */
 .tags, .chips { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem; }
@@ -549,7 +545,6 @@ img { max-width: 100%; display: block; }
 
   .about { grid-template-columns: 1fr; }
   .about__photo { max-width: 320px; }
-  .feature { grid-template-columns: 1fr; gap: 1.6rem; }
-  .feature--flip .feature__media { order: 0; }
+  .project-grid { grid-template-columns: 1fr; }
   .creds { grid-template-columns: 1fr; gap: 2.5rem; }
 }
