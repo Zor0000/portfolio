@@ -370,8 +370,12 @@ img { max-width: 100%; display: block; }
 }
 .feature--flip .feature__media { order: 2; }
 .feature__media {
+  width: 100%;
   aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center top;
   border-radius: var(--radius);
+  border: 1px solid var(--line);
   box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.28);
 }
 .feature__title {
