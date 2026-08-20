@@ -367,6 +367,13 @@ img { max-width: 100%; display: block; }
   line-height: 1.1;
   margin-bottom: 0.8rem;
 }
+.project-card__org {
+  margin-top: -0.3rem;
+  margin-bottom: 0.9rem;
+  font-size: 0.86rem;
+  color: var(--text-mut);
+  letter-spacing: 0.01em;
+}
 .project-card__pitch { color: var(--text-soft); line-height: 1.5; }
 .project-card .tags { margin-top: 1.4rem; }
 .project-card .feature__links { margin-top: auto; padding-top: 1.5rem; }
