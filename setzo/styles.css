@@ -30,6 +30,12 @@ h1, h2, h3 { line-height: 1.15; letter-spacing: -.04em; }
 .button { display: inline-block; border: 1px solid #d4ff4a; border-radius: 999px; padding: 11px 20px; text-decoration: none; font-weight: 650; }
 .button-primary { background: #d4ff4a; color: #0a0a0a; }
 .button-primary:hover { background: #e7ff9b; color: #0a0a0a; }
+.button:disabled { font: inherit; font-weight: 650; opacity: .6; cursor: not-allowed; }
+.button-primary:disabled:hover { background: #d4ff4a; }
+.screenshots { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.screenshots figure { margin: 0; }
+.screenshots img { display: block; width: 100%; height: auto; border: 1px solid #333; border-radius: 18px; }
+.screenshots figcaption { margin-top: 14px; color: #c7c7c2; font-weight: 650; }
 
 .section { border-top: 1px solid #2d2d2d; padding-block: 64px; }
 .section h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin: 0 0 24px; }
@@ -54,5 +60,6 @@ h1, h2, h3 { line-height: 1.15; letter-spacing: -.04em; }
   .header-inner { align-items: flex-start; flex-direction: column; padding-block: 18px; gap: 12px; }
   .site-nav { gap: 8px 18px; }
   .grid { grid-template-columns: 1fr; }
+  .screenshots { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
   .hero { padding-block: 54px 70px; }
 }
