@@ -1,0 +1,32 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "gradient-text",
+        "value": "*",
+        "files": [
+          "projects/cooling.html"
+        ],
+        "createdAt": "2026-10-08T14:31:36.043Z",
+        "reason": "Agent: the cooling detail page has no gradient text; only the home-page hero uses flowing-gradient in the shared stylesheet"
+      },
+      {
+        "rule": "overused-font",
+        "value": "instrument serif",
+        "createdAt": "2026-10-08T14:38:34.769Z",
+        "reason": "Agent: the portfolio bundles Instrument Serif as its display face; the detector guidance names Fraunces, not this distinct font"
+      },
+      {
+        "rule": "gradient-text",
+        "value": "*",
+        "files": [
+          "styles.css"
+        ],
+        "createdAt": "2026-10-08T14:38:37.610Z",
+        "reason": "Agent: the portfolio README documents its flowing white-to-green home-page headline as part of the existing After Hours theme"
+      }
+    ]
+  }
+}
