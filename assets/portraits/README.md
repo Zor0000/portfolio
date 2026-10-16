@@ -1,5 +1,14 @@
 # Current light stipple portrait
 
+Day/night themes share the same scatter renderer and coffee-photo animation.
+Night mode uses `neeraj-stipple.webp` with lighten blending. Day mode uses the
+user-selected transparent `neeraj-day-halftone.webp`, a 720×960 delivery copy of
+the supplied `neeraj-day-halftone.png`. Its original sage and ivory colors are
+preserved, with multiply blending on warm ivory. Both images decode before enabling the
+interaction, and a `themechange` event redraws the canvas immediately.
+The shared `theme.js` restores the saved theme before styles load on all pages;
+night remains the default for new visitors.
+
 The homepage uses `neeraj-stipple.webp`, a 720×960 crop of the selected second preview, preserved in `neeraj-stipple.png`. CSS lighten blending integrates its dark backdrop into the page. Existing 850 ms hover/exit timing is retained.
 
 Generated using built-in imagegen from the original photograph. Prompt: Preserve the man’s likeness and expression. Head only on near-black #111513. Realistic stipple portrait designed for a dark canvas: small pale sage dots describe light on forehead, cheeks, nose and chin; black negative space forms hair, pupils and shadows. Correct positive lighting; no negative inversion. Separate round dots, no solid skin fill, lines, oval, text or watermark.

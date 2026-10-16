@@ -25,20 +25,21 @@ async function initializePortrait() {
   const portrait = document.querySelector('.portrait-interaction');
   if (!portrait) return;
   const button = portrait.querySelector('.portrait-toggle');
-  const fallback = portrait.querySelector('.hero-dot-portrait');
+  const nightPortrait = portrait.querySelector('.hero-dot-portrait');
+  const dayPortrait = portrait.querySelector('.portrait-day');
   const canvas = portrait.querySelector('canvas');
   const photos = portrait.querySelector('.portrait-photos');
   const context = canvas.getContext('2d');
   if (!context) return;
 
   try {
-    await fallback.decode();
+    await Promise.all([nightPortrait.decode(), dayPortrait.decode()]);
     const scale = 500 / 240;
     const sample = document.createElement('canvas');
     sample.width = 240;
     sample.height = 320;
     const sampleContext = sample.getContext('2d', { willReadFrequently: true });
-    sampleContext.drawImage(fallback, 0, 0, 240, 320);
+    sampleContext.drawImage(nightPortrait, 0, 0, 240, 320);
     const pixels = sampleContext.getImageData(0, 0, 240, 320).data;
     const particles = [];
     const pitch = 2;
@@ -77,6 +78,7 @@ async function initializePortrait() {
     let paddingX = 150;
 
     function draw() {
+      const fallback = document.documentElement.dataset.theme === 'day' ? dayPortrait : nightPortrait;
       context.clearRect(0, 0, canvasLogicalWidth, 320 * scale * 1.6);
       if (progress === 0) {
         context.drawImage(fallback, paddingX, 200, 500, 320 * scale);
@@ -189,6 +191,7 @@ async function initializePortrait() {
       if (!portrait.contains(event.target) && target) reveal(false);
     });
     reducedMotion.addEventListener('change', animate);
+    document.addEventListener('themechange', draw);
 
     function updateSuspension() {
       suspended = document.hidden || !intersecting;
