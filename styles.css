@@ -24,6 +24,27 @@ img{display:block;max-width:100%;height:auto}
 .header-links a{display:inline-flex;align-items:center;gap:5px;min-height:44px}
 .header-links a[aria-current]{color:var(--accent)}
 .home main{padding-top:55px}
+.home .hero{position:relative}
+.portrait-interaction{position:absolute;right:-8px;top:-7px;width:170px;aspect-ratio:3/4;}
+.portrait-toggle{position:absolute;inset:0;z-index:3;display:block;width:100%;height:100%;padding:0;border:0;background:none;color:inherit;cursor:pointer;touch-action:manipulation}
+.portrait-toggle:disabled{cursor:default}
+.portrait-toggle:focus-visible{outline:2px solid var(--accent);outline-offset:8px;border-radius:3px}
+.hero-dot-portrait{width:100%;height:auto;pointer-events:none;user-select:none}
+.portrait-canvas{position:absolute;left:-30%;top:-30%;width:160%;height:160%;pointer-events:none;visibility:hidden}
+/* Blend the selected dark-backed artwork into the page without altering its dots. */
+.hero-dot-portrait,.portrait-canvas{mix-blend-mode:lighten}
+.portrait-interaction[data-ready] .portrait-canvas{visibility:visible}
+.portrait-interaction[data-ready] .hero-dot-portrait{visibility:hidden}
+.portrait-photos{position:absolute;inset:0;pointer-events:none}
+.portrait-preview-region{position:absolute;inset:-12%;z-index:-1;pointer-events:none}
+.portrait-interaction[data-expanded="true"] .portrait-preview-region{pointer-events:auto}
+.portrait-photo{position:absolute;left:50%;top:50%;z-index:2;display:block;width:var(--size);aspect-ratio:3/4;opacity:0;visibility:hidden;pointer-events:none;transform:translate(-50%,-50%) scale(.05);transition:left .85s cubic-bezier(.16,1,.3,1),top .85s cubic-bezier(.16,1,.3,1),transform .85s cubic-bezier(.16,1,.3,1),opacity .25s,visibility .25s}
+.portrait-interaction[data-expanded="true"] .portrait-photo{left:var(--x);top:var(--y);opacity:1;visibility:visible;transform:translate3d(0,0,0) scale(1) rotate(var(--angle));pointer-events:auto;transition-delay:var(--delay)}
+.portrait-photo-motion{position:relative;display:block;width:100%;height:100%;border-radius:16px;box-shadow:0 10px 35px #00000024;animation:portrait-photo-float var(--float-duration) ease-in-out infinite alternate;animation-play-state:paused}
+.portrait-interaction[data-expanded="true"] .portrait-photo-motion{animation-play-state:running}
+.portrait-photo img{width:100%;height:100%;object-fit:cover;border-radius:16px}
+@keyframes portrait-photo-float{from{transform:translate(-5px,-10px) rotate(-3deg)}to{transform:translate(6px,16px) rotate(4deg)}}
+.portrait-interaction[data-suspended] .portrait-photo-motion{animation-play-state:paused}
 .greeting{font-size:12px;color:var(--quiet);letter-spacing:.02em}
 .hero h1{margin-top:13px;font-size:32px;font-weight:400;letter-spacing:-1px;line-height:1.4;text-wrap:balance}
 
@@ -128,6 +149,11 @@ img{display:block;max-width:100%;height:auto}
 
 @media(min-width:1500px){.site-header{padding-top:85px}.home main{padding-top:65px}}
 @media(max-width:600px){
+  /* Keep scatter padding inside the phone viewport without resizing the face. */
+  .portrait-canvas{left:-20%;width:140%}
+  .home .hero{display:flow-root}
+  .portrait-interaction{position:relative;float:right;right:auto;top:auto;width:100px;margin:-9px 0 15px 18px}
+  .home .hero h1{clear:both}
   .wrap{width:calc(100% - 44px)}
   .site-header{padding-top:27px}
   .home main{padding-top:38px}

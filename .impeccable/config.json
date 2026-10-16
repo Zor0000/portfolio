@@ -26,6 +26,24 @@
         ],
         "createdAt": "2026-10-08T14:38:37.610Z",
         "reason": "Agent: the portfolio README documents its flowing white-to-green home-page headline as part of the existing After Hours theme"
+      },
+      {
+        "rule": "gradient-text",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-16T06:12:55.834Z",
+        "reason": "User explicitly requested no redesign and preservation of existing site styling; the gradient heading predates the portrait addition."
+      },
+      {
+        "rule": "undersized-ui-text",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-16T06:14:26.792Z",
+        "reason": "Existing mobile project labels are 10px in HEAD styles.css, predating the portrait. User explicitly requested adding only the portrait without redesigning the site; retain existing typography. Detector does not support a narrower value for this rule."
       }
     ]
   }
