@@ -6,7 +6,7 @@
   <title>Neeraj Chormale — AI/ML Engineer &amp; Backend Developer</title>
   <meta name="description" content="AI/ML engineer and backend developer in Pune. Building agents, knowledge graphs, retrieval pipelines, and the infrastructure that makes AI useful.">
   <meta name="author" content="Neeraj Chormale">
-  <meta name="color-scheme" content="dark">
+  <meta name="color-scheme" content="dark light">
   <meta name="theme-color" content="#141616">
   <meta property="og:title" content="Neeraj Chormale — AI/ML Engineer &amp; Backend Developer">
   <meta property="og:description" content="AI/ML engineer and backend developer in Pune. Building agents, knowledge graphs, retrieval pipelines, and the infrastructure that makes AI useful.">
@@ -16,8 +16,10 @@
   <link rel="canonical" href="https://www.neeraj.works/">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preload" href="assets/fonts/dm-sans-regular.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+  <script src="theme.js?v=day-night-2"></script>
+  <link rel="stylesheet" href="theme.css?v=day-night-2">
+  <link rel="stylesheet" href="styles.css?v=day-night-2">
+  <script src="script.js?v=day-night-3" defer></script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Neeraj Chormale", "url": "https://www.neeraj.works/", "jobTitle": "AI/ML Engineer & Backend Developer", "sameAs": ["https://github.com/Zor0000", "https://linkedin.com/in/neeraj-chormale", "https://x.com/chormale_neeraj"]}</script>
 </head>
 <body class="home">
@@ -25,10 +27,24 @@
   <div class="wrap" id="top">
     <header class="site-header">
       <a class="wordmark" href="./" aria-label="Neeraj Chormale — home">neeraj.</a>
-      <span class="header-note"><span class="location-dot" aria-hidden="true"></span>Pune, India</span>
+      <span class="header-note"><button class="theme-toggle" type="button" aria-label="Switch to day mode" title="Switch to day mode" hidden><svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg><svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.9 13.1A9 9 0 0 1 10.9 3.1 9 9 0 1 0 20.9 13.1Z"/></svg></button>Pune, India</span>
     </header>
     <main id="main" tabindex="-1">
       <section class="hero" aria-labelledby="hero-title">
+        <div class="portrait-interaction" data-expanded="false">
+          <button class="portrait-toggle" type="button" aria-label="Show coffee photos" aria-expanded="false" aria-controls="portrait-photos" disabled>
+            <img class="hero-dot-portrait" src="assets/portraits/neeraj-stipple.webp" alt="Stipple portrait of Neeraj Chormale" width="240" height="320" decoding="async">
+            <img class="hero-dot-portrait portrait-day" src="assets/portraits/neeraj-day-halftone.webp" alt="Halftone portrait of Neeraj Chormale" width="240" height="320" decoding="async">
+          </button>
+          <canvas class="portrait-canvas" aria-hidden="true"></canvas>
+          <div class="portrait-photos" id="portrait-photos" aria-hidden="true">
+            <span class="portrait-preview-region"></span>
+            <span class="portrait-photo" style="--x:-15%;--y:0%;--angle:-12deg;--size:58%;--delay:0ms;--float-duration:7s"><span class="portrait-photo-motion"><img src="assets/photos/latte.webp" width="600" height="800" alt="Latte art in a metal cup" decoding="async"></span></span>
+            <span class="portrait-photo" style="--x:48%;--y:-3%;--angle:11deg;--size:53%;--delay:35ms;--float-duration:8s"><span class="portrait-photo-motion"><img src="assets/photos/coffee-shelf.webp" width="600" height="800" alt="Coffee tins arranged on a café shelf" decoding="async"></span></span>
+            <span class="portrait-photo" style="--x:-15%;--y:50%;--angle:8deg;--size:54%;--delay:70ms;--float-duration:9s"><span class="portrait-photo-motion"><img src="assets/photos/iced-coffee.webp" width="600" height="800" alt="Iced coffee on a blue saucer" decoding="async"></span></span>
+            <span class="portrait-photo" style="--x:48%;--y:47%;--angle:9deg;--size:57%;--delay:105ms;--float-duration:10s"><span class="portrait-photo-motion"><img src="assets/photos/cold-drip.webp" width="600" height="800" alt="A wooden cold-drip coffee tower" decoding="async"></span></span>
+          </div>
+        </div>
         <p class="greeting">Hello, I’m Neeraj Chormale.</p>
         <h1 class="flowing-gradient" id="hero-title">Building the Useful Side of AI.</h1>
         <p class="intro">I work with agents, knowledge graphs, and backend systems.<br class="desktop-break">

@@ -1,0 +1,11 @@
+/* Shared, keyboard-accessible sun/moon control for every page. */
+.theme-toggle{display:inline-grid;place-items:center;flex:0 0 44px;width:44px;height:44px;padding:0;border:0;border-radius:8px;background:transparent;color:var(--accent);cursor:pointer;touch-action:manipulation;transition:background-color .2s ease,color .2s ease}
+.theme-toggle[hidden]{display:none}
+.theme-toggle:hover{background:var(--line)}
+.theme-toggle:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.theme-icon{display:block;grid-area:1/1;width:18px;height:18px;pointer-events:none}
+.theme-icon-moon{display:none}
+:root[data-theme="day"] .theme-icon-sun{display:none}
+:root[data-theme="day"] .theme-icon-moon{display:block}
+@media(prefers-reduced-motion:reduce){.theme-toggle{transition:none}}
+@media print{.theme-toggle{display:none!important}}

@@ -6,7 +6,7 @@
   <title>ReWatch — Neeraj Chormale</title>
   <meta name="description" content="A content-based watch recommender that matches both structured features and free text.">
   <meta name="author" content="Neeraj Chormale">
-  <meta name="color-scheme" content="dark">
+  <meta name="color-scheme" content="dark light">
   <meta name="theme-color" content="#141616">
   <meta property="og:title" content="ReWatch — Neeraj Chormale">
   <meta property="og:description" content="A content-based watch recommender that matches both structured features and free text.">
@@ -16,8 +16,10 @@
   <link rel="canonical" href="https://www.neeraj.works/projects/rewatch.html">
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="preload" href="../assets/fonts/dm-sans-regular.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="../styles.css">
-  <script src="../script.js" defer></script>
+  <script src="../theme.js?v=day-night-2"></script>
+  <link rel="stylesheet" href="../theme.css?v=day-night-2">
+  <link rel="stylesheet" href="../styles.css?v=day-night-2">
+  <script src="../script.js?v=day-night-3" defer></script>
   
 </head>
 <body class="inner-page project-page">
@@ -26,6 +28,7 @@
     <header class="site-header">
       <a class="wordmark" href=".././" aria-label="Neeraj Chormale — home">neeraj.</a>
       <nav class="header-links" aria-label="Primary">
+        <button class="theme-toggle" type="button" aria-label="Switch to day mode" title="Switch to day mode" hidden><svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg><svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.9 13.1A9 9 0 0 1 10.9 3.1 9 9 0 1 0 20.9 13.1Z"/></svg></button>
         <a href="../projects.html" aria-current="location">Work</a>
         <a href="../about.html">About</a>
         <a href="../Neeraj-Chormale-Resume.pdf" target="_blank" rel="noopener">Résumé <span aria-hidden="true">↗</span></a>
