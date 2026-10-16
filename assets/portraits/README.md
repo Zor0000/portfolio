@@ -62,7 +62,7 @@ alternating between `translate(-5px,-10px) rotate(-3deg)` and
 `translate(6px,16px) rotate(4deg)`. Four corner slots adapt the reference's
 six-image arrangement to the four supplied photos and existing portrait size.
 
-Hover and keyboard focus reveal the photos; leaving or Escape restores the
+Hover and keyboard activation reveal the photos; leaving or Escape restores the
 portrait. Touch toggles on tap. Reduced motion switches states immediately;
 canvas work stops at rest and floating pauses offscreen or in a hidden tab.
 

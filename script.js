@@ -174,9 +174,6 @@ async function initializePortrait() {
     portrait.addEventListener('pointerleave', event => {
       if (event.pointerType === 'mouse') reveal(false);
     });
-    button.addEventListener('focus', () => {
-      if (button.matches(':focus-visible')) reveal(true);
-    });
     button.addEventListener('click', event => {
       // Mouse uses hover, while touch and assistive activation can toggle.
       if (event.pointerType !== 'mouse') reveal(!target);
