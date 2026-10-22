@@ -44,6 +44,15 @@
         ],
         "createdAt": "2026-10-16T06:14:26.792Z",
         "reason": "Existing mobile project labels are 10px in HEAD styles.css, predating the portrait. User explicitly requested adding only the portrait without redesigning the site; retain existing typography. Detector does not support a narrower value for this rule."
+      },
+      {
+        "rule": "gradient-text",
+        "value": "*",
+        "files": [
+          "about.html"
+        ],
+        "createdAt": "2026-10-22T10:41:39.961Z",
+        "reason": "Agent: About has no gradient text; detector follows shared styles for the existing home headline. This addition uses solid text."
       }
     ]
   }

@@ -138,6 +138,29 @@ img{display:block;max-width:100%;height:auto}
 .creds__detail{font-size:11px;white-space:nowrap;color:var(--accent)}
 .creds__sub{display:block;font-size:12px;color:var(--quiet);margin-top:5px}
 .creds__link{text-decoration:underline;text-decoration-color:var(--subtle-line)}
+
+/* A quiet, full-year calendar on the extended About page. */
+.github-section{--github-0:#292e2a;--github-1:#0e4429;--github-2:#006d32;--github-3:#26a641;--github-4:#39d353}
+:root[data-theme="day"] .github-section{--github-0:#e0e5d9;--github-1:#b6d4a7;--github-2:#81b66a;--github-3:#518b3d;--github-4:#315e27}
+.github-heading{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.github-heading h2{font-size:23px;font-weight:400;line-height:1.5;letter-spacing:-.4px}
+.github-heading a{display:inline-flex;align-items:center;gap:7px;min-height:44px;font-size:12px;color:var(--muted)}
+.github-heading a:hover{color:var(--accent)}
+.github-activity{min-height:132px;margin-top:12px}
+.github-summary{color:var(--muted);font-size:14px;font-variant-numeric:tabular-nums}
+.github-calendar{margin-top:22px;padding:2px 0 8px;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:var(--subtle-line) var(--paper)}
+.github-calendar:focus-visible,.github-retry:focus-visible{outline:2px solid var(--accent);outline-offset:5px;border-radius:2px}
+.github-graph{display:block;width:100%;min-width:580px;height:auto}
+.github-day{fill:var(--github-0)}
+.github-day[data-level="1"]{fill:var(--github-1)}
+.github-day[data-level="2"]{fill:var(--github-2)}
+.github-day[data-level="3"]{fill:var(--github-3)}
+.github-day[data-level="4"]{fill:var(--github-4)}
+.github-day:hover{stroke:var(--ink);stroke-width:1}
+.github-scroll-hint{display:none;margin-top:6px;color:var(--quiet);font-size:12px}
+.github-retry{display:inline-flex;align-items:center;min-height:44px;margin-top:8px;padding:0;border:0;background:none;color:var(--link);font:inherit;font-size:12px;text-decoration:underline;text-underline-offset:5px;cursor:pointer;touch-action:manipulation}
+.github-calendar[hidden],.github-scroll-hint[hidden],.github-retry[hidden]{display:none}
+
 .contact-section>p{max-width:520px}
 .email-link{display:inline-block;max-width:100%;overflow-wrap:anywhere;font-size:15px;color:var(--accent);margin-top:23px}
 .resume-link{display:table;font-size:12px;margin-top:17px}
@@ -195,6 +218,9 @@ img{display:block;max-width:100%;height:auto}
   .role-points,.detail-points{font-size:13px}
   .creds__row{display:block}
   .creds__detail{display:block;margin-top:4px}
+  .github-heading h2{font-size:22px}
+  .github-summary{font-size:13px}
+  .github-scroll-hint:not([hidden]){display:block}
   .email-link{font-size:13px}
   .inner-page .site-footer{margin-top:48px}
   .page-intro .project-lead{font-size:14px}
@@ -216,5 +242,8 @@ img{display:block;max-width:100%;height:auto}
   .flowing-gradient{background:none;color:#111;-webkit-text-fill-color:#111;animation:none}
   .skip-link,.header-links,.back-link,.page-index,.next-project{display:none}
   .experience-role,.skill-group,.credentials li,.work-card{break-inside:avoid}
+  .github-section{break-inside:avoid}
+  .github-graph{min-width:0}
+  .github-scroll-hint,.github-retry{display:none!important}
   .site-footer,.inner-page .site-footer{margin-top:25px}
 }
