@@ -20,7 +20,8 @@
   <link rel="stylesheet" href="../theme.css?v=day-night-2">
   <link rel="stylesheet" href="../styles.css?v=day-night-2">
   <script src="../script.js?v=day-night-3" defer></script>
-  
+  <link rel="stylesheet" href="../assets/setzo/showcase.css?v=1">
+  <script src="../assets/setzo/showcase.js?v=1" defer></script>
 </head>
 <body class="inner-page project-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -37,7 +38,54 @@
     <main id="main" tabindex="-1">
       <a class="back-link" href="../projects.html"><span aria-hidden="true">←</span> All projects</a>
       <article>
-        <div class="page-intro"><p class="eyebrow">Workout companion</p><h1>Setzo</h1><p class="project-lead">A native iPhone app for logging workouts and runs, tracking splits, and seeing progress. Local workout storage with optional Supabase sync, plus a Lock Screen Live Activity for sets and rest timers.</p><div class="project-actions"><a href="../setzo/">App details <span aria-hidden="true">↗</span></a>
+        <div class="page-intro"><p class="eyebrow">Workout companion</p><h1>Setzo</h1>
+          <figure class="setzo-showcase" data-expanded="false">
+            <div class="setzo-stage">
+              <button class="setzo-toggle" type="button" aria-label="Show Setzo app screenshots" aria-expanded="false" aria-controls="setzo-screens" disabled>
+                <pre class="setzo-ascii" aria-hidden="true">
+
+
+
+
+                                                                         +::
+                                                                   #%%%%=,,,#%+,,,
+                                                                  %%%%%%,,%%%#,,,,,,
+                                                                %%%%%%%%,%%%%*,,,,,,,
+                                                              %%%%%%%%%%,%%%%#,,,,,,,,
+                                                              %%%%%%%%%%;%%%%#,,,,%%*,,
+                                                              %%%%%%%%##+,####=,,,%%*,,,
+                                                              %%%%+######,###**,,,**+:,,,
+                                                              *######****+,***+=,,,::,,,,
+                  ##*,,,:  +=                              %%%%#***=*****+:=+++=:,,,,,,,,,
+              #%%%%#,,%%%%;,,,,                      %%%%%%%%##=**++++++++=,===;;:,,,,,,,,
+              %%%%%+,%%%%%,,,,,,,              %%%%%%%%##**++==;+++========;,;::::,,,,,,,,
+           %%#%%%%%+,%%%%#,,,,,,,,       %%%%%%%%##**++==;::,,,,,==;;;;;;;;;:,,,,,,,,,,,,,
+          #%%#%%%%%*,%%%%%,,,,,,,,,%%%%%%%%##**++==;::,,,,,       ;:::::::::,,,,,,,,,,,,,
+          %%%=%%%%%#,%%%%#=,,,+%%%%%%##**++==;::,,,,,              ,,,,,,,,,,,,,,,,,,,
+          %%%%%#####;#####*,,,,##**++==;::,,,,,                      ,,,,,,,,,,,,,,,,,
+          =%%#######*,*****;,,,==;:,,,,,,                              ,,  ,,,,,,,
+           ####******;+*++++,,,,,,,,,,
+           +***+**++++,++====,,,,,,,,,
+            ++++++++===,=;;;;:,,,,,,,,
+             =========;;,::::,,,,,,,,,
+              ;;;;;;;;:::,,,,,,,,,,,,,
+               ::,,:::,,,,,,,,,,,,,,
+                ,,,,,,,,,,,,,,,,,,
+                  ,,,,,,,,,,,,,,,
+                        ,,,</pre>
+                <canvas class="setzo-canvas" aria-hidden="true"></canvas>
+              </button>
+              <div class="setzo-screens" id="setzo-screens" aria-hidden="true">
+                <img class="setzo-screen" src="../assets/setzo/workout-logger.jpg" alt="Workout logging and rest timer" width="1206" height="2622" decoding="async">
+                <img class="setzo-screen" src="../assets/setzo/run.jpg" alt="Run tracking" width="1206" height="2622" decoding="async">
+                <img class="setzo-screen" src="../assets/setzo/progress.jpg" alt="Workout progress" width="1206" height="2622" decoding="async">
+                <img class="setzo-screen" src="../assets/setzo/ironfuel.jpg" alt="IronFuel meal suggestions" width="1206" height="2622" decoding="async">
+              </div>
+            </div>
+            <figcaption class="setzo-hint" aria-hidden="true"><span class="setzo-hint-rest">Hover or tap to explore the app</span><span class="setzo-hint-open">Workouts · Runs · Progress · Fuel</span></figcaption>
+            <noscript><p class="setzo-fallback"><a href="../setzo/">View the app screenshots ↗</a></p></noscript>
+          </figure>
+          <p class="project-lead">A native iPhone app for logging workouts and runs, tracking splits, and seeing progress. Local workout storage with optional Supabase sync, plus a Lock Screen Live Activity for sets and rest timers.</p><div class="project-actions"><a href="../setzo/">App details <span aria-hidden="true">↗</span></a>
 <a href="https://github.com/Zor0000/setzo" target="_blank" rel="noopener">GitHub&nbsp;↗</a></div></div>
         <section class="content-section" aria-labelledby="closer-title"><h2 id="closer-title">A closer look.</h2><ul class="detail-points"><li>Log workouts and runs, track splits, and review progress in a native SwiftUI app.</li><li>Workout data stays local, with optional Supabase sync backed by PostgreSQL.</li><li>A Lock Screen Live Activity shows sets and rest timers. The companion app page also covers run and walk logging, personal records, and Fuel Buddy meal ideas.</li></ul></section>
         <section class="content-section project-toolkit" aria-labelledby="toolkit-title"><h2 id="toolkit-title">Built with</h2><ul class="tags"><li>SwiftUI</li><li>iOS</li><li>Supabase</li><li>PostgreSQL</li></ul></section>

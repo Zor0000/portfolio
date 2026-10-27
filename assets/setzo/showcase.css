@@ -1,0 +1,36 @@
+/* Setzo's ASCII illustration shares the portfolio's day/night ink. */
+.setzo-showcase{margin:8px 0 30px}
+.setzo-stage{position:relative;height:330px;isolation:isolate}
+.setzo-toggle{position:absolute;inset:0;z-index:2;width:100%;height:100%;padding:0;border:0;background:transparent;color:var(--accent);cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.setzo-toggle:disabled{cursor:default}
+.setzo-toggle:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:12px}
+.setzo-ascii{position:absolute;left:50%;top:50%;margin:0;transform:translate(-50%,-50%);font:8px/16px monospace;white-space:pre;text-align:left;pointer-events:none;user-select:none}
+.setzo-canvas{display:block;width:100%;height:100%;pointer-events:none}
+.setzo-showcase[data-ready] .setzo-ascii{visibility:hidden}
+.setzo-screens{position:absolute;inset:0;pointer-events:none}
+.setzo-screen{position:absolute;left:50%;top:50%;width:126px;height:auto;max-width:none;border-radius:16px;box-shadow:0 12px 24px #00000024;opacity:0;visibility:hidden;transform:translate(-50%,-50%) scale(.25) rotate(0deg);transition:transform .65s cubic-bezier(.16,1,.3,1),opacity .2s,visibility .65s}
+.setzo-screen:nth-child(1){--x:-207px;--y:7px;--angle:-10deg;--delay:0ms}
+.setzo-screen:nth-child(2){--x:-69px;--y:-5px;--angle:-3deg;--delay:35ms}
+.setzo-screen:nth-child(3){--x:69px;--y:-5px;--angle:3deg;--delay:70ms}
+.setzo-screen:nth-child(4){--x:207px;--y:7px;--angle:10deg;--delay:105ms}
+.setzo-showcase[data-expanded="true"] .setzo-screen{opacity:1;visibility:visible;transform:translate(calc(-50% + var(--x)),calc(-50% + var(--y))) scale(1) rotate(var(--angle));transition-delay:var(--delay)}
+.setzo-hint{position:relative;min-height:24px;text-align:center;color:var(--quiet);font-size:11px}
+.setzo-hint span{display:block;transition:opacity .2s}
+.setzo-hint-open{position:absolute;inset:0;opacity:0}
+.setzo-showcase[data-expanded="true"] .setzo-hint-rest{opacity:0}
+.setzo-showcase[data-expanded="true"] .setzo-hint-open{opacity:1}
+.setzo-fallback{text-align:center;font-size:12px;color:var(--accent)}
+.setzo-showcase:not([data-ready]) .setzo-hint{visibility:hidden}
+@media(max-width:600px){
+  .setzo-stage{height:230px}
+  .setzo-screen{width:clamp(57px,18vw,105px);border-radius:10px}
+  .setzo-screen:nth-child(1){--x:-155%;--y:12px;--angle:-12deg}
+  .setzo-screen:nth-child(2){--x:-52%;--y:-6px;--angle:-4deg}
+  .setzo-screen:nth-child(3){--x:52%;--y:-6px;--angle:4deg}
+  .setzo-screen:nth-child(4){--x:155%;--y:12px;--angle:12deg}
+  .setzo-ascii{font-size:4.5px;line-height:9px}
+  .setzo-showcase{margin-top:0;margin-bottom:24px}
+}
+@media(prefers-reduced-motion:reduce){
+  .setzo-screen,.setzo-hint span{transition:none}
+}
