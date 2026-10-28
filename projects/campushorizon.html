@@ -21,6 +21,8 @@
   <link rel="stylesheet" href="../styles.css?v=day-night-2">
   <script src="../script.js?v=day-night-3" defer></script>
   
+  <link rel="stylesheet" href="../assets/showcases/showcase.css?v=1">
+  <script src="../assets/showcases/showcase.js?v=1" defer></script>
 </head>
 <body class="inner-page project-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -37,7 +39,45 @@
     <main id="main" tabindex="-1">
       <a class="back-link" href="../projects.html"><span aria-hidden="true">←</span> All projects</a>
       <article>
-        <div class="page-intro"><p class="eyebrow">Hackathon discovery</p><h1>CampusHorizon</h1><p class="project-lead">A student hackathon discovery dashboard with self-healing web scrapers. Tracks 300+ events across Devpost, MLH, Devfolio, LabLab, Luma, and Meetup. When a target site redesigns, Bright Data's AI inspects the live DOM and repairs the scraper automatically — same Collector ID, zero downstream code changes.</p><div class="project-actions"><a href="https://campushorizon-production.up.railway.app/" target="_blank" rel="noopener">Live&nbsp;↗</a>
+        <div class="page-intro"><p class="eyebrow">Hackathon discovery</p><h1>CampusHorizon</h1>
+          <figure class="project-showcase" data-kind="campushorizon" data-label="CampusHorizon dashboard screenshots" data-expanded="false">
+            <div class="project-stage">
+              <button class="project-toggle" type="button" aria-label="Show CampusHorizon dashboard screenshots" aria-expanded="false" aria-controls="campushorizon-reveal" disabled>
+                <pre class="project-ascii" aria-hidden="true">                                                                                              ##
+                                                                                   #############
+                                                                       ############............##
+                                                            ############.......................##
+                                                 ###########.............................%%..%%###
+                                     ############..........................  .....%%..%%..%%..%%##
+                          ###########.............................................%%..%%..%%..%%##
+               ###########........................................................%%..%%..%%...%%
+          #####............................**...............................  .....%%..%%..%%..
+          ##................................*...........*..........................%%..%%..%%.
+          ##..........................................**...........................%%..%%..%%%.
+           ##...................**.......%%%%%%%%%%%.........................  .....%%..%%..%%..
+           ##......................*...%%%%........%%%%.............................%%..%%..%%..%%##
+           ##........................%%%..............%%%...........................%%..%%%..%%..%%##
+            ##......................%%%................%%...........@@........  .....%%..%%..%%..%%##
+                ....................%%.................%.@@@@@@@@@@..................%%..%%..%%..%%##
+                 ...................%%........@@@@@@@@@@.............................%%%..%.........##
+                  ............****@@@@@@@@@@@..................................  ...................##
+                 ......@@@@@@@@@@........................=========...............................#####
+               ...............................===========....................... .....###########
+              ##..................============.............................###########
+              ##.............=====.............................############
+              ###...................................###########
+               ##.......................############
+               ##............############
+                #############
+                ##</pre>
+                <canvas class="project-canvas" aria-hidden="true"></canvas>
+              </button>
+              <div class="project-reveal" id="campushorizon-reveal" aria-hidden="true"><img class="project-shot" src="../assets/showcases/campus-discovery.png" alt="CampusHorizon’s locally running discovery page with event sources and upcoming deadlines" width="1360" height="900" decoding="async"><img class="project-shot project-shot-secondary" src="../assets/showcases/campus-events.png" alt="CampusHorizon’s hackathon dashboard filtered to online events using saved project data" width="1360" height="900" decoding="async"></div>
+            </div>
+            <figcaption class="project-hint" aria-hidden="true"><span class="project-hint-rest">Hover or tap to discover events</span><span class="project-hint-open">Discovery · Online hackathons · Local project captures</span></figcaption>
+            <noscript><p class="project-fallback"><a href="https://github.com/Zor0000/campushorizon" target="_blank" rel="noopener">Explore the project ↗</a></p></noscript>
+          </figure>
+          <p class="project-lead">A student hackathon discovery dashboard with self-healing web scrapers. Tracks 300+ events across Devpost, MLH, Devfolio, LabLab, Luma, and Meetup. When a target site redesigns, Bright Data's AI inspects the live DOM and repairs the scraper automatically — same Collector ID, zero downstream code changes.</p><div class="project-actions"><a href="https://campushorizon-production.up.railway.app/" target="_blank" rel="noopener">Live&nbsp;↗</a>
               <a href="https://github.com/Zor0000/campushorizon" target="_blank" rel="noopener">GitHub&nbsp;↗</a></div></div>
         <section class="content-section" aria-labelledby="closer-title"><h2 id="closer-title">A closer look.</h2><ul class="detail-points"><li>Tracks 300+ events across Devpost, MLH, Devfolio, LabLab, Luma, and Meetup.</li><li>Bright Data AI inspects a changed live DOM and repairs the scraper while keeping the same Collector ID.</li><li>The Django dashboard and automated collection pipeline use Python, GitHub Actions, and Docker.</li></ul></section>
         <section class="content-section project-toolkit" aria-labelledby="toolkit-title"><h2 id="toolkit-title">Built with</h2><ul class="tags"><li>Python</li><li>Django</li><li>Bright Data</li><li>GitHub Actions</li><li>Docker</li></ul></section>

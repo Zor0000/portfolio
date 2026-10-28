@@ -21,6 +21,8 @@
   <link rel="stylesheet" href="../styles.css?v=day-night-2">
   <script src="../script.js?v=day-night-3" defer></script>
   
+  <link rel="stylesheet" href="../assets/showcases/showcase.css?v=1">
+  <script src="../assets/showcases/showcase.js?v=1" defer></script>
 </head>
 <body class="inner-page project-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -37,7 +39,48 @@
     <main id="main" tabindex="-1">
       <a class="back-link" href="../projects.html"><span aria-hidden="true">←</span> All projects</a>
       <article>
-        <div class="page-intro"><p class="eyebrow">Conversational learning</p><h1>Skillonomy</h1><p class="project-context">Built at Toshal Infotech</p><p class="project-lead">An AI-powered learning platform that helps business users learn AI through interactive conversations and personalized hands-on labs. The system combines a Neo4j knowledge graph for multi-hop concept reasoning with Milvus RAG for grounded answers.</p><div class="project-actions"><a href="https://youtu.be/tapvk7PJ8is" target="_blank" rel="noopener">YouTube demo&nbsp;↗</a></div></div>
+        <div class="page-intro"><p class="eyebrow">Conversational learning</p><h1>Skillonomy</h1><p class="project-context">Built at Toshal Infotech</p>
+          <figure class="project-showcase" data-kind="skillonomy" data-label="Skillonomy learning workflow" data-expanded="false">
+            <div class="project-stage">
+              <button class="project-toggle" type="button" aria-label="Show Skillonomy learning workflow" aria-expanded="false" aria-controls="skillonomy-reveal" disabled>
+                <pre class="project-ascii" aria-hidden="true">                            *****++                                          ****###
+                  ######*********+++++++                                *********##########%%%
+             %%%########*********++++++++===                       ++++**********##########%%%%%%%%
+          ;;;%%%########*********++++++++========              ++++++++**********##########%%%%%%%%;;;
+          ;;;%%%########*********++++++++=========;;;;    ===++++++++++**********##########%%%%%%%%;;;
+          ;;;%%%#######......****+...++++=========;;;;;,,====++++++++++****...***##......##%%%%%%%%;;;
+          ;;;%%%########*********++++++...========;;;;;,,====+++++++++...********##########%%%%%%%%;;;
+          ;;;%%%########******....+++++++===..====;;;;;,,====+++++..+++*******....#########%%%%%%%%;;;
+          ;;;%%%###...##*********++++..++========.;;;;;,,====+.++++++++**..******#########...%%%%%%;;;
+          ;;;%%%########*********++++++++...======;;;;;,,====+++++++...**********##########%%%%%%%%;;;
+          ;;;%%%#######......****+...++++=====...=;;;;;,,====++...+++++****...***##......##%%%%%%%%;;;
+          ;;;%%%########*********++++++...========;;;;;,,====+++++++++...********##########%%%%%%%%;;;
+          ;;;%%%########******....+++++++===..====;;;;;,,====+++++..+++*******....#########%%%%%%%%;;;
+          ;;;%%%###...##*********++++..++========.;;;;;,,====+.++++++++**..******#########...%%%%%%;;;
+          ;;;%%%########*********++++++++...======;;;;;,,====+++++++...**********##########%%%%%%%%;;;
+          ;;;%%%#######;;;;;;;;;;;;;;;+++=====...=;;;;;,,====++...+++++***;;;;;;;;;;;;;;;##%%%%%%%%;;;
+          ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;========;;;;;,,====+++++++++;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+          ;;;;;;;;;;;;;;;;        ;;;;;;;;;;;;;===;;;;;,,====++++;;;;;;;;;;;;;         ;;;;;;;;;;;;;;;
+          ;;;;;                        ;;;;;;;;;;;;;;;;,,====;;;;;;;;;;;;
+                                            ;;;;;;;;;;;,,;;;;;;;;;;;
+                                                 ;;;;;;,,;;;;;;
+                                                      ;;;;</pre>
+                <canvas class="project-canvas" aria-hidden="true"></canvas>
+              </button>
+              <div class="project-reveal" id="skillonomy-reveal" aria-hidden="true"><div class="learning-flow">
+<p>A question becomes something you can build.</p>
+<svg class="learning-map" viewBox="0 0 540 112" role="img" aria-label="A question connects to related concepts and source material, which ground an answer and a practical lab.">
+<path d="M58 55H156M184 47L262 22M184 63L262 89M285 22L368 50M285 89L368 62M394 56H480"/>
+<circle class="map-node" cx="58" cy="55" r="6"/><circle class="map-node" cx="170" cy="55" r="14"/><circle class="map-node" cx="274" cy="20" r="9"/><circle class="map-node" cx="274" cy="91" r="9"/><circle class="map-node" cx="381" cy="56" r="13"/><circle class="map-node" cx="486" cy="56" r="6"/>
+<text x="58" y="84">Question</text><text x="170" y="87">Concepts</text><text class="map-label" x="274" y="48">Relationships</text><text class="map-label" x="274" y="76">Sources</text><text x="381" y="87">Answer</text><text x="486" y="85">Lab</text>
+</svg>
+<ol class="learning-steps"><li><strong>Connect</strong><span>Neo4j links related AI concepts.</span></li><li><strong>Ground</strong><span>Milvus retrieves source material.</span></li><li><strong>Practice</strong><span>LangGraph guides conversation and lab generation.</span></li></ol>
+</div></div>
+            </div>
+            <figcaption class="project-hint" aria-hidden="true"><span class="project-hint-rest">Hover or tap to open the book</span><span class="project-hint-open">How it works · Illustrated workflow</span></figcaption>
+            <noscript><p class="project-fallback"><a href="https://youtu.be/tapvk7PJ8is" target="_blank" rel="noopener">Watch the project demo ↗</a></p></noscript>
+          </figure>
+          <p class="project-lead">An AI-powered learning platform that helps business users learn AI through interactive conversations and personalized hands-on labs. The system combines a Neo4j knowledge graph for multi-hop concept reasoning with Milvus RAG for grounded answers.</p><div class="project-actions"><a href="https://youtu.be/tapvk7PJ8is" target="_blank" rel="noopener">YouTube demo&nbsp;↗</a></div></div>
         <section class="content-section" aria-labelledby="closer-title"><h2 id="closer-title">A closer look.</h2><ul class="detail-points"><li>A Neo4j knowledge graph connects AI concepts and their relationships for multi-hop reasoning.</li><li>Milvus retrieval grounds answers in source material, including questions outside the usual distribution.</li><li>LangGraph orchestrates conversations and lab generation; FastAPI provides the Python backend.</li></ul></section>
         <section class="content-section project-toolkit" aria-labelledby="toolkit-title"><h2 id="toolkit-title">Built with</h2><ul class="tags"><li>Python</li><li>FastAPI</li><li>Neo4j</li><li>Milvus</li><li>LangGraph</li></ul></section>
       </article>
