@@ -21,6 +21,8 @@
   <link rel="stylesheet" href="../styles.css?v=day-night-2">
   <script src="../script.js?v=day-night-3" defer></script>
   
+  <link rel="stylesheet" href="../assets/showcases/showcase.css?v=1">
+  <script src="../assets/showcases/showcase.js?v=1" defer></script>
 </head>
 <body class="inner-page project-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -37,7 +39,47 @@
     <main id="main" tabindex="-1">
       <a class="back-link" href="../projects.html"><span aria-hidden="true">←</span> All projects</a>
       <article>
-        <div class="page-intro"><p class="eyebrow">Reinforcement learning</p><h1>Data Center Cooling Optimization</h1><p class="project-lead">A reinforcement-learning agent that learns continuous cooling control for a multi-zone data centre — holding every zone in bounds while cutting power. A custom Gymnasium environment models the thermal dynamics; a Soft Actor-Critic agent learns the policy.</p><div class="project-actions"><a href="https://zor0000.github.io/datacenter-rl-cooling/" target="_blank" rel="noopener">Live demo&nbsp;↗</a><a href="https://github.com/Zor0000/datacenter-rl-cooling" target="_blank" rel="noopener">GitHub&nbsp;↗</a></div></div>
+        <div class="page-intro"><p class="eyebrow">Reinforcement learning</p><h1>Data Center Cooling Optimization</h1>
+          <figure class="project-showcase" data-kind="cooling" data-label="cooling simulation screenshots" data-expanded="false">
+            <div class="project-stage">
+              <button class="project-toggle" type="button" aria-label="Show cooling simulation screenshots" aria-expanded="false" aria-controls="cooling-reveal" disabled>
+                <pre class="project-ascii" aria-hidden="true">                                                     %%%%%%%%%%%::::
+                                          %%%%%%%%%%%%%%%%%%%%%%::::::::
+                                    ******%%%%%%%%%%%%%%%%%%%%%%:::::::::::
+                                    *****************%%%%%%%%%%%:::::::::::::::
+                                    ****************************:::::::::::::::::
+                                    ***,,,=,,=,*****************:::::::::::::::::
+                                    ***,,,=,,=,,=,,=,,,,,*******:::::::::::::::::
+                                    ***,,,=,,=,,=,,=,,,,,,,,,***:::::::::::::::::
+                                    ***********,=,,=,,,,,@@,,***:::::::::::::::::
+                                    ***,,****************,,,,***:::::::::::::::::
+                                    ***,,,=,,=,,=,,=************:::::::::::::::::
+                                    ***,,,=,,=,,=,,=,,,,,,,,,***:::::::::::::::::
+                                    *****,=,,=,,=,,=,,,,,@@,,***:::::::::::::::::
+                                    ****************,,,,,,,,,***:::::::::::::::::
+                                    ***,,,=,,=,*****************:::::::::::::::::
+                                    ***,,,=,,=,,=,,=,,,,,*******:::::::::::::::::
+                                    ***,,,=,,=,,=,,=,,,,,,,,,***:::::::::::::::::
+                                    ***********,=,,=,,,,,@@,,***:::::::::::::::::
+                                    ***,,****************,,,,***:::::::::::::::::
+                                    ***,,,=,,=,,=,,=************:::::::::::::::::
+                                    ***,,,=,,=,,=,,=,,,,,,,,,***:::::::::::::::::
+                                    *****,=,,=,,=,,=,,,,,@@,,***:::::::::::::::::
+                                    ****************,,,,,,,,,***:::::::::::::::::
+                                    ***,,,=,,=,*****************:::::::::::::::::
+                                    ***,,,=,,=,,=,,=,,,,,*******:::::::::::::::::
+                                    ***,,,=,,=,,=,,=,,,,,,,,,***:::::::::::::::
+                                         ******,=,,=,,,,,@@,,***:::::::::::
+                                                  *******,,,,***::::::
+                                                           *****::</pre>
+                <canvas class="project-canvas" aria-hidden="true"></canvas>
+              </button>
+              <div class="project-reveal" id="cooling-reveal" aria-hidden="true"><img class="project-shot" src="../assets/showcases/cooling-simulation.png" alt="Browser thermal sandbox showing temperature, cooling effort, power draw and the reference controller" width="1072" height="676" decoding="async"><img class="project-shot project-shot-secondary" src="../assets/showcases/cooling-loop.png" alt="Control-loop diagram from the cooling project’s website" width="1072" height="637" decoding="async"></div>
+            </div>
+            <figcaption class="project-hint" aria-hidden="true"><span class="project-hint-rest">Hover or tap to look inside</span><span class="project-hint-open">Thermal sandbox · Control loop</span></figcaption>
+            <noscript><p class="project-fallback"><a href="https://zor0000.github.io/datacenter-rl-cooling/#demo" target="_blank" rel="noopener">Explore the simulation ↗</a></p></noscript>
+          </figure>
+          <p class="project-lead">A reinforcement-learning agent that learns continuous cooling control for a multi-zone data centre — holding every zone in bounds while cutting power. A custom Gymnasium environment models the thermal dynamics; a Soft Actor-Critic agent learns the policy.</p><div class="project-actions"><a href="https://zor0000.github.io/datacenter-rl-cooling/" target="_blank" rel="noopener">Live demo&nbsp;↗</a><a href="https://github.com/Zor0000/datacenter-rl-cooling" target="_blank" rel="noopener">GitHub&nbsp;↗</a></div></div>
         <section class="content-section" aria-labelledby="closer-title"><h2 id="closer-title">A closer look.</h2><ul class="detail-points"><li>A custom Gymnasium environment models thermal dynamics across multiple cooling zones.</li><li>A Soft Actor-Critic agent learns a continuous control policy with Stable-Baselines3.</li><li>The policy aims to keep every zone within temperature bounds while reducing power use.</li></ul></section>
         <section class="content-section project-toolkit" aria-labelledby="toolkit-title"><h2 id="toolkit-title">Built with</h2><ul class="tags"><li>Python</li><li>Gymnasium</li><li>Stable-Baselines3</li><li>SAC</li></ul></section>
       </article>

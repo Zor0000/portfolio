@@ -21,6 +21,8 @@
   <link rel="stylesheet" href="../styles.css?v=day-night-2">
   <script src="../script.js?v=day-night-3" defer></script>
   
+  <link rel="stylesheet" href="../assets/showcases/showcase.css?v=1">
+  <script src="../assets/showcases/showcase.js?v=1" defer></script>
 </head>
 <body class="inner-page project-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -37,7 +39,48 @@
     <main id="main" tabindex="-1">
       <a class="back-link" href="../projects.html"><span aria-hidden="true">←</span> All projects</a>
       <article>
-        <div class="page-intro"><p class="eyebrow">Watch recommendations</p><h1>ReWatch</h1><p class="project-lead">A content-based recommender for wristwatches that matches taste from both structured fields and free text. Feature engineering with one-hot encoding, scaling, and TF-IDF; cosine similarity surfaces the closest matches.</p><div class="project-actions"><a href="https://github.com/Zor0000/ReWatch" target="_blank" rel="noopener">GitHub&nbsp;↗</a></div></div>
+        <div class="page-intro"><p class="eyebrow">Watch recommendations</p><h1>ReWatch</h1>
+          <figure class="project-showcase" data-kind="rewatch" data-label="Tilt the ASCII wristwatch" data-expanded="false">
+            <div class="project-stage">
+              <button class="project-toggle" type="button" aria-label="Tilt the ASCII wristwatch" aria-pressed="false" disabled>
+                <pre class="project-ascii" aria-hidden="true">                                                            *##
+                                                           **::::##
+                                                          ##:::::::::##
+                                                         **#####:::::::::##
+                                                        **::::::####::::::::*#
+                                                       ####:::::::::####:::**
+                                                      **::#####:::::::::####
+                                                ;;;;;;;;;;;;;:#####::::::**
+                                           ;;;@@@@@@@@@@@@@@@@;;;:#####:**
+                                         ;;@@@@@......@......@@@@@;;::###
+                                       ;;@@@@..@.............@...@@@;;**
+                                      ;;@@@........................@@@;;
+                                     ;;@@@.........@@..............@.@@@;
+                                     ;@@@............@...........@@...@@@;
+                                    ;;@@..............@......@@........@@;;
+                                    ;;@@..............+@@@@............@@@;
+                                     ;@@@..............@@...............@@;;
+                                     ;;@@.................+.............@@;;
+                                      ;@@@..................+..........@@@;
+                                       ;@@@.@.................+.......@@@;##
+                                        ;;@@@........................@@@;####
+                                        ##;;@@@...@.............@..@@@@;;###
+                                       **:##;;@@@@@......@......@@@@@;;
+                                      **::::::#;;;@@@@@@@@@@@@@@@@;;;
+                                     ####:::::::::#;;;;;;;;;;;;;
+                                    **::#####:::::::::####
+                                   **:::::::#####::::::**
+                                  *####:::::::::#####:**
+                                     ::####::::::::::##
+                                         ::####:::::**
+                                             ::#####*
+                                                 :*#</pre>
+                <canvas class="project-canvas" aria-hidden="true"></canvas>
+              </button>
+            </div>
+            <figcaption class="project-hint" aria-hidden="true"><span class="project-hint-rest">Hover or tap to tilt the watch</span><span class="project-hint-open">A closer look at the details</span></figcaption>
+          </figure>
+          <p class="project-lead">A content-based recommender for wristwatches that matches taste from both structured fields and free text. Feature engineering with one-hot encoding, scaling, and TF-IDF; cosine similarity surfaces the closest matches.</p><div class="project-actions"><a href="https://github.com/Zor0000/ReWatch" target="_blank" rel="noopener">GitHub&nbsp;↗</a></div></div>
         <section class="content-section" aria-labelledby="closer-title"><h2 id="closer-title">A closer look.</h2><ul class="detail-points"><li>One-hot encoding and scaling represent the structured watch features.</li><li>TF-IDF represents the free-text descriptions.</li><li>Cosine similarity finds the closest matches using scikit-learn, pandas, and NumPy.</li></ul></section>
         <section class="content-section project-toolkit" aria-labelledby="toolkit-title"><h2 id="toolkit-title">Built with</h2><ul class="tags"><li>scikit-learn</li><li>pandas</li><li>NumPy</li></ul></section>
       </article>

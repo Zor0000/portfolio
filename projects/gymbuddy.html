@@ -21,6 +21,8 @@
   <link rel="stylesheet" href="../styles.css?v=day-night-2">
   <script src="../script.js?v=day-night-3" defer></script>
   
+  <link rel="stylesheet" href="../assets/showcases/showcase.css?v=1">
+  <script src="../assets/showcases/showcase.js?v=1" defer></script>
 </head>
 <body class="inner-page project-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -37,7 +39,44 @@
     <main id="main" tabindex="-1">
       <a class="back-link" href="../projects.html"><span aria-hidden="true">←</span> All projects</a>
       <article>
-        <div class="page-intro"><p class="eyebrow">Graph-based coaching</p><h1>GymBuddy Agent</h1><p class="project-lead">A graph-backed fitness agent that reasons over exercises and routines to coach you through a session. It walks an exercise knowledge graph in Cypher to plan and adapt workouts in conversation — deployed and live on Vercel.</p><div class="project-actions"><a href="https://gymbuddy-gamma-one.vercel.app" target="_blank" rel="noopener">Live&nbsp;↗</a>
+        <div class="page-intro"><p class="eyebrow">Graph-based coaching</p><h1>GymBuddy Agent</h1>
+          <figure class="project-showcase" data-kind="gymbuddy" data-label="GymBuddy app preview" data-expanded="false">
+            <div class="project-stage">
+              <button class="project-toggle" type="button" aria-label="Show GymBuddy app preview" aria-expanded="false" aria-controls="gymbuddy-reveal" disabled>
+                <pre class="project-ascii" aria-hidden="true">                                                                                 @@@@@@@@@@
+                                                                                @@,,,,,,,,@@
+                 @@@@@@@@                                                      @@,,,,,,,,,,@@
+               @@@,,,,,,@@@                                                    @@,,,,,,,,,,@@
+              @@,,,,,,,,,,@@                                                    @@,,,,,,,,@@
+              @@,,,,,,,,,,@@                                                ++   @@@@@@@@@@
+              @@,,,,,,,,,,@@                                             +            +
+               @@@,,,,,,@@@  ++                                      ++               +
+                 @@@@@@@@        ++             @@@@@@@@         ++                    +
+                                      ++     @@@,,,,,,,,@@@   ++                       +
+                                          ++@@,,,,,,,,,,,,@@                           +
+                                           @@,,,,,,,,,,,,,,@@                          +
+                                           @@,,,,,,,,,,,,,,@@
+                                           @@,,,,,,,,,,,,,,@@                           +
+                                            @@,,,,,,,,,,,,@@                            +
+                                            +@@@,,,,,,,,@@@                             +
+                                         ++     @@@@@@@@                                +
+                                       +                                                 +
+                                    ++                                                   +
+                                  +                                                  @@@@@@@@@@
+                       @@@@@@  ++                                                   @@,,,,,,,,@@
+                     @@,,,,,,@@                                                    @@,,,,,,,,,,@@
+                    @@,,,,,,,,@@                                                   @@,,,,,,,,,,@@
+                    @@,,,,,,,,@@                                                    @@,,,,,,,,@@
+                     @@,,,,,,@@                                                      @@@@@@@@@@
+                       @@@@@@</pre>
+                <canvas class="project-canvas" aria-hidden="true"></canvas>
+              </button>
+              <div class="project-reveal" id="gymbuddy-reveal" aria-hidden="true"><img class="project-shot" src="../assets/showcases/gymbuddy-chat.png" alt="GymBuddy’s live interface with Neo4j Aura Agent status and suggested exercise questions" width="1100" height="660" decoding="async"></div>
+            </div>
+            <figcaption class="project-hint" aria-hidden="true"><span class="project-hint-rest">Hover or tap to explore the agent</span><span class="project-hint-open">Exercises · Muscles · Equipment · App preview</span></figcaption>
+            <noscript><p class="project-fallback"><a href="https://gymbuddy-gamma-one.vercel.app" target="_blank" rel="noopener">Open GymBuddy ↗</a></p></noscript>
+          </figure>
+          <p class="project-lead">A graph-backed fitness agent that reasons over exercises and routines to coach you through a session. It walks an exercise knowledge graph in Cypher to plan and adapt workouts in conversation — deployed and live on Vercel.</p><div class="project-actions"><a href="https://gymbuddy-gamma-one.vercel.app" target="_blank" rel="noopener">Live&nbsp;↗</a>
               <a href="https://github.com/Zor0000/gymbuddy-agent" target="_blank" rel="noopener">GitHub&nbsp;↗</a></div></div>
         <section class="content-section" aria-labelledby="closer-title"><h2 id="closer-title">A closer look.</h2><ul class="detail-points"><li>An exercise knowledge graph represents movements and routines.</li><li>Cypher queries let the agent reason over that graph to plan and adapt workouts in conversation.</li><li>The web app is deployed on Vercel, with a live version and source repository.</li></ul></section>
         <section class="content-section project-toolkit" aria-labelledby="toolkit-title"><h2 id="toolkit-title">Built with</h2><ul class="tags"><li>Neo4j</li><li>Cypher</li><li>AI Agent</li><li>Vercel</li></ul></section>
